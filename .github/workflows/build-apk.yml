@@ -82,7 +82,7 @@ jobs:
           }
           EOF
           printf '<resources>\n<string name="app_name">%s</string>\n<string name="url">%s</string>\n</resources>\n' "$APP_NAME" "$APP_URL" > app/src/main/res/values/strings.xml
-        - name: Build
+      - name: Build
         run: |
           for i in 1 2 3 4; do
             gradle assembleDebug --no-daemon && exit 0
